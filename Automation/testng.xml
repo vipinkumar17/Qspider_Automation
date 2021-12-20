@@ -1,0 +1,28 @@
+<suite name="Suite">
+  <test thread-count="5" name="TestBlock1">
+  <parameters name = "browser" value = "chrome"/>
+    <classes>
+      <class name="testNG.BatchExecution"/>
+      <class name="com.actitime.test.CustomerModule1"/>
+      <class name="moduleTestNG.CustomerModule"/>
+      <class name="testNG.AssertClass"/>
+      <class name="batchExecution.CustomerModule"/>
+      <class name="batchExecution.CustomerModule1"/>
+      <class name="parallelExecution.ProjectModule"/>
+      <class name="com.actitime.test.CustomerModule"/>
+      </classes>
+  </test>
+       <test thread-count="5" name="TestBlock2">
+        <parameters name = "browser" value = "firefox"/>
+       <classes>
+      <class name="testNG.SoftAssertClass"/>
+      <class name="parallelExecution.CustomerModule"/>
+      <class name="testNG.Demo"/>
+      <class name="interviewbased.Screenshot"/>
+      <class name="com.actitime.test.VerifyTitle"/>
+      <class name="moduleTestNG.ProjectModule"/>
+      <class name="com.actitime.test.ProjectModule"/>
+      <class name="com.actitime.test.CustomerModuleForBeforeClassAndMethod"/>
+    </classes>
+  </test> <!-- Test -->
+</suite> <!-- Suite -->

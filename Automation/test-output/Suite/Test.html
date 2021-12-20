@@ -1,0 +1,785 @@
+<html>
+<head>
+<title>TestNG:  Test</title>
+<link href="../testng.css" rel="stylesheet" type="text/css" />
+<link href="../my-testng.css" rel="stylesheet" type="text/css" />
+
+<style type="text/css">
+.log { display: none;} 
+.stack-trace { display: none;} 
+</style>
+<script type="text/javascript">
+<!--
+function flip(e) {
+  current = e.style.display;
+  if (current == 'block') {
+    e.style.display = 'none';
+    return 0;
+  }
+  else {
+    e.style.display = 'block';
+    return 1;
+  }
+}
+
+function toggleBox(szDivId, elem, msg1, msg2)
+{
+  var res = -1;  if (document.getElementById) {
+    res = flip(document.getElementById(szDivId));
+  }
+  else if (document.all) {
+    // this is the way old msie versions work
+    res = flip(document.all[szDivId]);
+  }
+  if(elem) {
+    if(res == 0) elem.innerHTML = msg1; else elem.innerHTML = msg2;
+  }
+
+}
+
+function toggleAllBoxes() {
+  if (document.getElementsByTagName) {
+    d = document.getElementsByTagName('div');
+    for (i = 0; i < d.length; i++) {
+      if (d[i].className == 'log') {
+        flip(d[i]);
+      }
+    }
+  }
+}
+
+// -->
+</script>
+
+</head>
+<body>
+<h2 align='center'>Test</h2><table border='1' align="center">
+<tr>
+<td>Tests passed/Failed/Skipped:</td><td>52/2/0</td>
+</tr><tr>
+<td>Started on:</td><td>Tue Sep 14 18:39:56 PDT 2021</td>
+</tr>
+<tr><td>Total time:</td><td>36 seconds (36525 ms)</td>
+</tr><tr>
+<td>Included groups:</td><td></td>
+</tr><tr>
+<td>Excluded groups:</td><td></td>
+</tr>
+</table><p/>
+<small><i>(Hover the method name to see the test class name)</i></small><p/>
+<table width='100%' border='1' class='invocation-failed'>
+<tr><td colspan='4' align='center'><b>FAILED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='testNG.AssertClass.testVerifyTitle()'><b>testVerifyTitle</b><br>Test class: testNG.AssertClass</td>
+<td><div><pre>java.lang.AssertionError: expected [Doodle] but found [Google]
+	at testNG.AssertClass.testVerifyTitle(AssertClass.java:19)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+... Removed 33 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace458998685", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace458998685'><pre>java.lang.AssertionError: expected [Doodle] but found [Google]
+	at org.testng.Assert.fail(Assert.java:99)
+	at org.testng.Assert.failNotEquals(Assert.java:1037)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:140)
+	at org.testng.Assert.assertEquals(Assert.java:122)
+	at org.testng.Assert.assertEquals(Assert.java:629)
+	at org.testng.Assert.assertEquals(Assert.java:639)
+	at testNG.AssertClass.testVerifyTitle(AssertClass.java:19)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:78)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:567)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+	at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:598)
+	at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
+	at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+	at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
+	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.testng.TestRunner.privateRun(TestRunner.java:794)
+	at org.testng.TestRunner.run(TestRunner.java:596)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:276)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
+	at org.testng.TestNG.runSuites(TestNG.java:1063)
+	at org.testng.TestNG.run(TestNG.java:1031)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div></td>
+<td>7</td>
+<td>testNG.AssertClass@6f46426d</td></tr>
+<tr>
+<td title='testNG.SoftAssertClass.testVerifyTitle()'><b>testVerifyTitle</b><br>Test class: testNG.SoftAssertClass</td>
+<td><div><pre>java.lang.AssertionError: The following asserts failed:
+	expected [Doodle] but found [Google]
+	at testNG.SoftAssertClass.testVerifyTitle(SoftAssertClass.java:23)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+... Removed 29 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1490985125", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1490985125'><pre>java.lang.AssertionError: The following asserts failed:
+	expected [Doodle] but found [Google]
+	at org.testng.asserts.SoftAssert.assertAll(SoftAssert.java:47)
+	at org.testng.asserts.SoftAssert.assertAll(SoftAssert.java:31)
+	at testNG.SoftAssertClass.testVerifyTitle(SoftAssertClass.java:23)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:78)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:567)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+	at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:598)
+	at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
+	at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+	at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
+	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.testng.TestRunner.privateRun(TestRunner.java:794)
+	at org.testng.TestRunner.run(TestRunner.java:596)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:276)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
+	at org.testng.TestNG.runSuites(TestNG.java:1063)
+	at org.testng.TestNG.run(TestNG.java:1031)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div></td>
+<td>9</td>
+<td>testNG.SoftAssertClass@3e84448c</td></tr>
+</table><p>
+<table width='100%' border='1' class='invocation-passed'>
+<tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='moduleTestNG.CustomerModule.modifyCustomer()'><b>modifyCustomer</b><br>Test class: moduleTestNG.CustomerModule<br/>
+<a href="#Output-2107443224" onClick='toggleBox("Output-2107443224", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-2107443224" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-2107443224">
+MODIFY CUSTOMER<br/>
+</div>
+</td>
+<td></td>
+<td>0</td>
+<td>moduleTestNG.CustomerModule@3d5c822d</td></tr>
+<tr>
+<td title='com.actitime.test.ProjectModule.modifyProject()'><b>modifyProject</b><br>Test class: com.actitime.test.ProjectModule<br/>
+<a href="#Output-1921553024" onClick='toggleBox("Output-1921553024", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1921553024" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1921553024">
+MODIFYPROJECT<br/>
+</div>
+</td>
+<td></td>
+<td>0</td>
+<td>com.actitime.test.ProjectModule@63a12c68</td></tr>
+<tr>
+<td title='interviewbased.Screenshot.testScreenshot()'><b>testScreenshot</b><br>Test class: interviewbased.Screenshot</td>
+<td></td>
+<td>8</td>
+<td>interviewbased.Screenshot@5403f35f</td></tr>
+<tr>
+<td title='testNG.BatchExecution.deleteCustomer()'><b>deleteCustomer</b><br>Test class: testNG.BatchExecution<br/>
+<a href="#Output-1912821769" onClick='toggleBox("Output-1912821769", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1912821769" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1912821769">
+DELETECUSTOMER<br/>
+</div>
+</td>
+<td></td>
+<td>0</td>
+<td>testNG.BatchExecution@7ea9e1e2</td></tr>
+<tr>
+<td title='com.actitime.test.CustomerModule.modifyCustomer()'><b>modifyCustomer</b><br>Test class: com.actitime.test.CustomerModule<br/>
+<a href="#Output-145455292" onClick='toggleBox("Output-145455292", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-145455292" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-145455292">
+MODIFYCUSTOMER<br/>
+</div>
+</td>
+<td></td>
+<td>0</td>
+<td>com.actitime.test.CustomerModule@4d5b6aac</td></tr>
+<tr>
+<td title='testNG.BatchExecution.editCustomer()'><b>editCustomer</b><br>Test class: testNG.BatchExecution<br/>
+<a href="#Output-91912419" onClick='toggleBox("Output-91912419", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-91912419" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-91912419">
+EDITCUSTOMER<br/>
+</div>
+</td>
+<td></td>
+<td>0</td>
+<td>testNG.BatchExecution@7ea9e1e2</td></tr>
+<tr>
+<td title='parallelExecution.CustomerModule.deleteCustomer()'><b>deleteCustomer</b><br>Test class: parallelExecution.CustomerModule<br/>
+<a href="#Output-52487168" onClick='toggleBox("Output-52487168", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-52487168" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-52487168">
+DELETE CUSTOMER<br/>
+</div>
+</td>
+<td></td>
+<td>0</td>
+<td>parallelExecution.CustomerModule@4a7f959b</td></tr>
+<tr>
+<td title='batchExecution.CustomerModule1.registerCustomer()'><b>registerCustomer</b><br>Test class: batchExecution.CustomerModule1<br/>
+<a href="#Output-1746578747" onClick='toggleBox("Output-1746578747", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1746578747" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1746578747">
+REGISTER CUSTOMER<br/>
+</div>
+</td>
+<td></td>
+<td>0</td>
+<td>batchExecution.CustomerModule1@49c7b90e</td></tr>
+<tr>
+<td title='testNG.Demo.demoTest()'><b>demoTest</b><br>Test class: testNG.Demo<br/>
+<a href="#Output-683718244" onClick='toggleBox("Output-683718244", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-683718244" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-683718244">
+Welcome To TestNG<br/>
+</div>
+</td>
+<td></td>
+<td>0</td>
+<td>testNG.Demo@429bffaa</td></tr>
+<tr>
+<td title='testNG.BatchExecution.registerCustomer()'><b>registerCustomer</b><br>Test class: testNG.BatchExecution<br/>
+<a href="#Output-4766562" onClick='toggleBox("Output-4766562", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-4766562" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-4766562">
+REGISTERCUSTOMER<br/>
+</div>
+</td>
+<td></td>
+<td>0</td>
+<td>testNG.BatchExecution@7ea9e1e2</td></tr>
+<tr>
+<td title='com.actitime.test.CustomerModuleForBeforeClassAndMethod.deleteCustomer()'><b>deleteCustomer</b><br>Test class: com.actitime.test.CustomerModuleForBeforeClassAndMethod<br/>
+<a href="#Output-715289224" onClick='toggleBox("Output-715289224", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-715289224" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-715289224">
+DELETECUSTOMER<br/>
+</div>
+</td>
+<td></td>
+<td>0</td>
+<td>com.actitime.test.CustomerModuleForBeforeClassAndMethod@28f3b248</td></tr>
+<tr>
+<td title='com.actitime.test.CustomerModule.createCustomer()'><b>createCustomer</b><br>Test class: com.actitime.test.CustomerModule<br/>
+<a href="#Output-1991724700" onClick='toggleBox("Output-1991724700", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1991724700" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1991724700">
+CREATECUSTOMER<br/>
+</div>
+</td>
+<td></td>
+<td>0</td>
+<td>com.actitime.test.CustomerModule@4d5b6aac</td></tr>
+<tr>
+<td title='com.actitime.test.CustomerModule.deleteCustomer()'><b>deleteCustomer</b><br>Test class: com.actitime.test.CustomerModule<br/>
+<a href="#Output-762509150" onClick='toggleBox("Output-762509150", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-762509150" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-762509150">
+DELETECUSTOMER<br/>
+</div>
+</td>
+<td></td>
+<td>0</td>
+<td>com.actitime.test.CustomerModule@4d5b6aac</td></tr>
+<tr>
+<td title='batchExecution.CustomerModule1.deleteCustomer()'><b>deleteCustomer</b><br>Test class: batchExecution.CustomerModule1<br/>
+<a href="#Output-2103569615" onClick='toggleBox("Output-2103569615", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-2103569615" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-2103569615">
+DELETE CUSTOMER<br/>
+</div>
+</td>
+<td></td>
+<td>0</td>
+<td>batchExecution.CustomerModule1@49c7b90e</td></tr>
+<tr>
+<td title='parallelExecution.ProjectModule.modifyProject()'><b>modifyProject</b><br>Test class: parallelExecution.ProjectModule<br/>
+<a href="#Output-1091781053" onClick='toggleBox("Output-1091781053", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1091781053" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1091781053">
+MODIFYPROJECT<br/>
+</div>
+</td>
+<td></td>
+<td>0</td>
+<td>parallelExecution.ProjectModule@10d307f1</td></tr>
+<tr>
+<td title='moduleTestNG.ProjectModule.modifyProject()'><b>modifyProject</b><br>Test class: moduleTestNG.ProjectModule<br/>
+<a href="#Output-497479191" onClick='toggleBox("Output-497479191", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-497479191" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-497479191">
+MODIFY PROJECT<br/>
+</div>
+</td>
+<td></td>
+<td>0</td>
+<td>moduleTestNG.ProjectModule@7e5afaa6</td></tr>
+<tr>
+<td title='com.actitime.test.ProjectModule.modifyProject()'><b>modifyProject</b><br>Test class: com.actitime.test.ProjectModule<br/>
+<a href="#Output-810196347" onClick='toggleBox("Output-810196347", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-810196347" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-810196347">
+MODIFYPROJECT<br/>
+</div>
+</td>
+<td></td>
+<td>0</td>
+<td>com.actitime.test.ProjectModule@63a12c68</td></tr>
+<tr>
+<td title='com.actitime.test.CustomerModule1.createCustomer()'><b>createCustomer</b><br>Test class: com.actitime.test.CustomerModule1<br/>
+<a href="#Output-2095064787" onClick='toggleBox("Output-2095064787", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-2095064787" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-2095064787">
+CREATECUSTOMER<br/>
+</div>
+</td>
+<td></td>
+<td>0</td>
+<td>com.actitime.test.CustomerModule1@7a419da4</td></tr>
+<tr>
+<td title='moduleTestNG.ProjectModule.modifyProject()'><b>modifyProject</b><br>Test class: moduleTestNG.ProjectModule<br/>
+<a href="#Output-2027133545" onClick='toggleBox("Output-2027133545", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-2027133545" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-2027133545">
+MODIFY PROJECT<br/>
+</div>
+</td>
+<td></td>
+<td>0</td>
+<td>moduleTestNG.ProjectModule@7e5afaa6</td></tr>
+<tr>
+<td title='moduleTestNG.CustomerModule.modifyCustomer()'><b>modifyCustomer</b><br>Test class: moduleTestNG.CustomerModule<br/>
+<a href="#Output-406765571" onClick='toggleBox("Output-406765571", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-406765571" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-406765571">
+MODIFY CUSTOMER<br/>
+</div>
+</td>
+<td></td>
+<td>0</td>
+<td>moduleTestNG.CustomerModule@3d5c822d</td></tr>
+<tr>
+<td title='com.actitime.test.CustomerModule.modifyCustomer()'><b>modifyCustomer</b><br>Test class: com.actitime.test.CustomerModule<br/>
+<a href="#Output-380616082" onClick='toggleBox("Output-380616082", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-380616082" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-380616082">
+MODIFYCUSTOMER<br/>
+</div>
+</td>
+<td></td>
+<td>0</td>
+<td>com.actitime.test.CustomerModule@4d5b6aac</td></tr>
+<tr>
+<td title='moduleTestNG.CustomerModule.modifyCustomer()'><b>modifyCustomer</b><br>Test class: moduleTestNG.CustomerModule<br/>
+<a href="#Output-572145572" onClick='toggleBox("Output-572145572", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-572145572" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-572145572">
+MODIFY CUSTOMER<br/>
+</div>
+</td>
+<td></td>
+<td>0</td>
+<td>moduleTestNG.CustomerModule@3d5c822d</td></tr>
+<tr>
+<td title='parallelExecution.CustomerModule.createCustomer()'><b>createCustomer</b><br>Test class: parallelExecution.CustomerModule<br/>
+<a href="#Output-755328698" onClick='toggleBox("Output-755328698", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-755328698" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-755328698">
+CREATE CUSTOMER<br/>
+</div>
+</td>
+<td></td>
+<td>0</td>
+<td>parallelExecution.CustomerModule@4a7f959b</td></tr>
+<tr>
+<td title='com.actitime.test.CustomerModule1.deleteCustomer()'><b>deleteCustomer</b><br>Test class: com.actitime.test.CustomerModule1<br/>
+<a href="#Output-1529115495" onClick='toggleBox("Output-1529115495", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1529115495" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1529115495">
+DELETECUSTOMER<br/>
+</div>
+</td>
+<td></td>
+<td>0</td>
+<td>com.actitime.test.CustomerModule1@7a419da4</td></tr>
+<tr>
+<td title='com.actitime.test.CustomerModule.modifyCustomer()'><b>modifyCustomer</b><br>Test class: com.actitime.test.CustomerModule<br/>
+<a href="#Output-744316958" onClick='toggleBox("Output-744316958", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-744316958" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-744316958">
+MODIFYCUSTOMER<br/>
+</div>
+</td>
+<td></td>
+<td>0</td>
+<td>com.actitime.test.CustomerModule@4d5b6aac</td></tr>
+<tr>
+<td title='batchExecution.CustomerModule.deleteCustomer()'><b>deleteCustomer</b><br>Test class: batchExecution.CustomerModule<br/>
+<a href="#Output-2010070923" onClick='toggleBox("Output-2010070923", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-2010070923" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-2010070923">
+DELETE CUSTOMER<br/>
+</div>
+</td>
+<td></td>
+<td>0</td>
+<td>batchExecution.CustomerModule@73700b80</td></tr>
+<tr>
+<td title='moduleTestNG.ProjectModule.modifyProject()'><b>modifyProject</b><br>Test class: moduleTestNG.ProjectModule<br/>
+<a href="#Output-1015122628" onClick='toggleBox("Output-1015122628", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1015122628" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1015122628">
+MODIFY PROJECT<br/>
+</div>
+</td>
+<td></td>
+<td>0</td>
+<td>moduleTestNG.ProjectModule@7e5afaa6</td></tr>
+<tr>
+<td title='com.actitime.test.CustomerModule1.modifyCustomer()'><b>modifyCustomer</b><br>Test class: com.actitime.test.CustomerModule1<br/>
+<a href="#Output-2114289475" onClick='toggleBox("Output-2114289475", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-2114289475" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-2114289475">
+MODIFYCUSTOMER<br/>
+</div>
+</td>
+<td></td>
+<td>0</td>
+<td>com.actitime.test.CustomerModule1@7a419da4</td></tr>
+<tr>
+<td title='moduleTestNG.CustomerModule.deleteCustomer()'><b>deleteCustomer</b><br>Test class: moduleTestNG.CustomerModule<br/>
+<a href="#Output-2081652693" onClick='toggleBox("Output-2081652693", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-2081652693" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-2081652693">
+DELETE CUSTOMER<br/>
+</div>
+</td>
+<td></td>
+<td>0</td>
+<td>moduleTestNG.CustomerModule@3d5c822d</td></tr>
+<tr>
+<td title='batchExecution.CustomerModule1.editCustomer()'><b>editCustomer</b><br>Test class: batchExecution.CustomerModule1<br/>
+<a href="#Output-458817438" onClick='toggleBox("Output-458817438", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-458817438" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-458817438">
+EDIT CUSTOMER<br/>
+</div>
+</td>
+<td></td>
+<td>0</td>
+<td>batchExecution.CustomerModule1@49c7b90e</td></tr>
+<tr>
+<td title='com.actitime.test.ProjectModule.createProject()'><b>createProject</b><br>Test class: com.actitime.test.ProjectModule<br/>
+<a href="#Output-368153528" onClick='toggleBox("Output-368153528", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-368153528" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-368153528">
+CREATEPROJECT<br/>
+</div>
+</td>
+<td></td>
+<td>0</td>
+<td>com.actitime.test.ProjectModule@63a12c68</td></tr>
+<tr>
+<td title='com.actitime.test.CustomerModuleForBeforeClassAndMethod.editCustomer()'><b>editCustomer</b><br>Test class: com.actitime.test.CustomerModuleForBeforeClassAndMethod<br/>
+<a href="#Output-1227459815" onClick='toggleBox("Output-1227459815", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1227459815" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1227459815">
+EDITCUSTOMER<br/>
+</div>
+</td>
+<td></td>
+<td>0</td>
+<td>com.actitime.test.CustomerModuleForBeforeClassAndMethod@28f3b248</td></tr>
+<tr>
+<td title='batchExecution.CustomerModule.createCustomer()'><b>createCustomer</b><br>Test class: batchExecution.CustomerModule<br/>
+<a href="#Output-883678948" onClick='toggleBox("Output-883678948", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-883678948" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-883678948">
+CREATE CUSTOMER<br/>
+</div>
+</td>
+<td></td>
+<td>0</td>
+<td>batchExecution.CustomerModule@73700b80</td></tr>
+<tr>
+<td title='batchExecution.CustomerModule1.editCustomer()'><b>editCustomer</b><br>Test class: batchExecution.CustomerModule1<br/>
+<a href="#Output-1589466857" onClick='toggleBox("Output-1589466857", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1589466857" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1589466857">
+EDIT CUSTOMER<br/>
+</div>
+</td>
+<td></td>
+<td>0</td>
+<td>batchExecution.CustomerModule1@49c7b90e</td></tr>
+<tr>
+<td title='com.actitime.test.CustomerModule.modifyCustomer()'><b>modifyCustomer</b><br>Test class: com.actitime.test.CustomerModule<br/>
+<a href="#Output-1520491508" onClick='toggleBox("Output-1520491508", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1520491508" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1520491508">
+MODIFYCUSTOMER<br/>
+</div>
+</td>
+<td></td>
+<td>0</td>
+<td>com.actitime.test.CustomerModule@4d5b6aac</td></tr>
+<tr>
+<td title='testNG.BatchExecution.editCustomer()'><b>editCustomer</b><br>Test class: testNG.BatchExecution<br/>
+<a href="#Output-661119548" onClick='toggleBox("Output-661119548", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-661119548" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-661119548">
+EDITCUSTOMER<br/>
+</div>
+</td>
+<td></td>
+<td>0</td>
+<td>testNG.BatchExecution@7ea9e1e2</td></tr>
+<tr>
+<td title='com.actitime.test.VerifyTitle.testVerifyTitle()'><b>testVerifyTitle</b><br>Test class: com.actitime.test.VerifyTitle</td>
+<td></td>
+<td>10</td>
+<td>com.actitime.test.VerifyTitle@483f6d77</td></tr>
+<tr>
+<td title='parallelExecution.ProjectModule.createProject()'><b>createProject</b><br>Test class: parallelExecution.ProjectModule<br/>
+<a href="#Output-709439274" onClick='toggleBox("Output-709439274", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-709439274" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-709439274">
+CREATEPROJECT<br/>
+</div>
+</td>
+<td></td>
+<td>0</td>
+<td>parallelExecution.ProjectModule@10d307f1</td></tr>
+<tr>
+<td title='moduleTestNG.ProjectModule.modifyProject()'><b>modifyProject</b><br>Test class: moduleTestNG.ProjectModule<br/>
+<a href="#Output-1533662221" onClick='toggleBox("Output-1533662221", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1533662221" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1533662221">
+MODIFY PROJECT<br/>
+</div>
+</td>
+<td></td>
+<td>0</td>
+<td>moduleTestNG.ProjectModule@7e5afaa6</td></tr>
+<tr>
+<td title='com.actitime.test.CustomerModuleForBeforeClassAndMethod.registerCustomer()'><b>registerCustomer</b><br>Test class: com.actitime.test.CustomerModuleForBeforeClassAndMethod<br/>
+<a href="#Output-495857386" onClick='toggleBox("Output-495857386", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-495857386" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-495857386">
+REGISTERCUSTOMER<br/>
+</div>
+</td>
+<td></td>
+<td>0</td>
+<td>com.actitime.test.CustomerModuleForBeforeClassAndMethod@28f3b248</td></tr>
+<tr>
+<td title='moduleTestNG.ProjectModule.createProject()'><b>createProject</b><br>Test class: moduleTestNG.ProjectModule<br/>
+<a href="#Output-467401150" onClick='toggleBox("Output-467401150", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-467401150" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-467401150">
+CREATE PROJECT<br/>
+</div>
+</td>
+<td></td>
+<td>0</td>
+<td>moduleTestNG.ProjectModule@7e5afaa6</td></tr>
+<tr>
+<td title='parallelExecution.ProjectModule.modifyProject()'><b>modifyProject</b><br>Test class: parallelExecution.ProjectModule<br/>
+<a href="#Output-1280128554" onClick='toggleBox("Output-1280128554", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1280128554" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1280128554">
+MODIFYPROJECT<br/>
+</div>
+</td>
+<td></td>
+<td>0</td>
+<td>parallelExecution.ProjectModule@10d307f1</td></tr>
+<tr>
+<td title='com.actitime.test.ProjectModule.modifyProject()'><b>modifyProject</b><br>Test class: com.actitime.test.ProjectModule<br/>
+<a href="#Output-1811787796" onClick='toggleBox("Output-1811787796", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1811787796" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1811787796">
+MODIFYPROJECT<br/>
+</div>
+</td>
+<td></td>
+<td>0</td>
+<td>com.actitime.test.ProjectModule@63a12c68</td></tr>
+<tr>
+<td title='com.actitime.test.ProjectModule.modifyProject()'><b>modifyProject</b><br>Test class: com.actitime.test.ProjectModule<br/>
+<a href="#Output-1617937669" onClick='toggleBox("Output-1617937669", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1617937669" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1617937669">
+MODIFYPROJECT<br/>
+</div>
+</td>
+<td></td>
+<td>0</td>
+<td>com.actitime.test.ProjectModule@63a12c68</td></tr>
+<tr>
+<td title='moduleTestNG.CustomerModule.createCustomer()'><b>createCustomer</b><br>Test class: moduleTestNG.CustomerModule<br/>
+<a href="#Output-1681920301" onClick='toggleBox("Output-1681920301", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1681920301" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1681920301">
+CREATE CUSTOMER<br/>
+</div>
+</td>
+<td></td>
+<td>0</td>
+<td>moduleTestNG.CustomerModule@3d5c822d</td></tr>
+<tr>
+<td title='parallelExecution.ProjectModule.deleteProject()'><b>deleteProject</b><br>Test class: parallelExecution.ProjectModule<br/>
+<a href="#Output-846718105" onClick='toggleBox("Output-846718105", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-846718105" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-846718105">
+DELETEPROJECT<br/>
+</div>
+</td>
+<td></td>
+<td>0</td>
+<td>parallelExecution.ProjectModule@10d307f1</td></tr>
+<tr>
+<td title='parallelExecution.ProjectModule.modifyProject()'><b>modifyProject</b><br>Test class: parallelExecution.ProjectModule<br/>
+<a href="#Output-583015088" onClick='toggleBox("Output-583015088", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-583015088" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-583015088">
+MODIFYPROJECT<br/>
+</div>
+</td>
+<td></td>
+<td>0</td>
+<td>parallelExecution.ProjectModule@10d307f1</td></tr>
+<tr>
+<td title='moduleTestNG.ProjectModule.deleteProject()'><b>deleteProject</b><br>Test class: moduleTestNG.ProjectModule<br/>
+<a href="#Output-511651343" onClick='toggleBox("Output-511651343", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-511651343" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-511651343">
+DELETE PROJECT<br/>
+</div>
+</td>
+<td></td>
+<td>0</td>
+<td>moduleTestNG.ProjectModule@7e5afaa6</td></tr>
+<tr>
+<td title='moduleTestNG.CustomerModule.modifyCustomer()'><b>modifyCustomer</b><br>Test class: moduleTestNG.CustomerModule<br/>
+<a href="#Output-1158676965" onClick='toggleBox("Output-1158676965", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1158676965" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1158676965">
+MODIFY CUSTOMER<br/>
+</div>
+</td>
+<td></td>
+<td>0</td>
+<td>moduleTestNG.CustomerModule@3d5c822d</td></tr>
+<tr>
+<td title='com.actitime.test.CustomerModuleForBeforeClassAndMethod.editCustomer()'><b>editCustomer</b><br>Test class: com.actitime.test.CustomerModuleForBeforeClassAndMethod<br/>
+<a href="#Output-1346354118" onClick='toggleBox("Output-1346354118", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1346354118" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1346354118">
+EDITCUSTOMER<br/>
+</div>
+</td>
+<td></td>
+<td>0</td>
+<td>com.actitime.test.CustomerModuleForBeforeClassAndMethod@28f3b248</td></tr>
+<tr>
+<td title='parallelExecution.ProjectModule.modifyProject()'><b>modifyProject</b><br>Test class: parallelExecution.ProjectModule<br/>
+<a href="#Output-1482166692" onClick='toggleBox("Output-1482166692", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1482166692" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1482166692">
+MODIFYPROJECT<br/>
+</div>
+</td>
+<td></td>
+<td>0</td>
+<td>parallelExecution.ProjectModule@10d307f1</td></tr>
+<tr>
+<td title='com.actitime.test.ProjectModule.deleteProject()'><b>deleteProject</b><br>Test class: com.actitime.test.ProjectModule<br/>
+<a href="#Output-622263400" onClick='toggleBox("Output-622263400", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-622263400" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-622263400">
+DELETEPROJECT<br/>
+</div>
+</td>
+<td></td>
+<td>0</td>
+<td>com.actitime.test.ProjectModule@63a12c68</td></tr>
+</table><p>
+</body>
+</html>
